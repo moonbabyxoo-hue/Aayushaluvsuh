@@ -1,3 +1,4 @@
+<!-- Source code by Aayusha Shrestha.! -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -317,12 +318,9 @@
     </style>
 </head>
 <body>
-    <!-- Particles Canvas -->
     <canvas id="particles-canvas"></canvas>
 
-    <!-- Main Content -->
     <div class="content-layer min-h-screen">
-        <!-- Hero Section -->
         <section class="min-h-screen flex items-center justify-center px-4 py-20">
             <div class="text-center max-w-4xl mx-auto">
                 <h1 class="hero-title text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 fade-in">
@@ -333,26 +331,23 @@
                 </p>
                 <div class="fade-in delay-2">
                     <button onclick="scrollToVideo()" class="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-10 py-5 rounded-full font-semibold text-lg hover:from-pink-600 hover:to-rose-600 transition-all transform hover:scale-110 shadow-2xl hover:shadow-pink-500/50 border-2 border-white/30">
-                        Ya Tap Gara Nubla💕
+                        Ya Tap Gara Nubla 💕
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- Video Section -->
         <section id="video-section" class="py-20 px-4">
             <div class="max-w-4xl mx-auto scroll-reveal">
                 <h2 class="hero-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
                     Our Special Moment
                 </h2>
                 <div class="video-container relative">
-                    <!-- Replace this video source with your own video URL -->
                     <video id="myVideo" loop playsinline>
                         <source src="boucha.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     
-                    <!-- Play/Pause Overlay -->
                     <div id="playOverlay" class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-pink-500/40 to-rose-500/40 backdrop-blur-sm cursor-pointer">
                         <div class="bg-gradient-to-br from-white to-pink-50 rounded-full p-8 pulse-animation shadow-2xl border-4 border-white/50">
                             <svg class="w-20 h-20 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
@@ -361,7 +356,6 @@
                         </div>
                     </div>
                     
-                    <!-- Sound Control Button -->
                     <div id="soundButton" class="sound-button" style="display: none;">
                         <svg id="soundIcon" class="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"/>
@@ -371,7 +365,6 @@
             </div>
         </section>
 
-        <!-- Poetry/Love Points Section -->
         <section class="py-20 px-4">
             <div class="max-w-4xl mx-auto scroll-reveal">
                 <h2 class="hero-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
@@ -412,7 +405,6 @@
             </div>
         </section>
 
-        <!-- Love Letter Section -->
         <section class="py-20 px-4">
             <div class="max-w-3xl mx-auto scroll-reveal">
                 <div class="glass-card text-center">
@@ -431,7 +423,6 @@
             </div>
         </section>
 
-        <!-- Final Message -->
         <section class="py-20 px-4">
             <div class="max-w-4xl mx-auto scroll-reveal mb-20">
                 <h2 class="hero-title text-4xl md:text-5xl font-bold text-white text-center mb-12">
@@ -486,7 +477,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="py-8 text-center text-white/60">
             <p class="mb-2">Made with 💖 by Aayusha Shrestha</p>
             <p class="text-sm">© 2026 Aayusha Shrestha. All rights reserved.</p>
@@ -494,7 +484,6 @@
     </div>
 
     <script>
-        // ===== PARTICLE SYSTEM =====
         const canvas = document.getElementById('particles-canvas');
         const ctx = canvas.getContext('2d');
         
@@ -512,7 +501,7 @@
                 this.speedX = Math.random() * 2 - 1;
                 this.speedY = Math.random() * 2 - 1;
                 this.opacity = Math.random() * 0.6 + 0.4;
-                this.hue = Math.random() * 60 + 300; // Pink to purple range
+                this.hue = Math.random() * 60 + 300;
             }
 
             update() {
@@ -590,7 +579,6 @@
         initParticles();
         animateParticles();
 
-        // ===== FLOATING HEARTS =====
         function createFloatingHeart() {
             const heart = document.createElement('div');
             heart.classList.add('floating-heart');
@@ -605,13 +593,11 @@
             }, 15000);
         }
 
-        // Create hearts periodically
         setInterval(createFloatingHeart, 3000);
         for (let i = 0; i < 5; i++) {
             setTimeout(createFloatingHeart, i * 600);
         }
 
-        // ===== ROSE PETALS =====
         function createRosePetal() {
             const petal = document.createElement('div');
             petal.classList.add('rose-petal');
@@ -627,13 +613,11 @@
             }, 20000);
         }
 
-        // Create petals periodically
         setInterval(createRosePetal, 2000);
         for (let i = 0; i < 8; i++) {
             setTimeout(createRosePetal, i * 400);
         }
 
-        // ===== BUTTERFLIES =====
         function createButterfly() {
             const butterfly = document.createElement('div');
             butterfly.classList.add('butterfly');
@@ -647,11 +631,9 @@
             }, 30000);
         }
 
-        // Create butterflies periodically
         setInterval(createButterfly, 8000);
         setTimeout(createButterfly, 2000);
 
-        // ===== SPARKLES =====
         function createSparkle() {
             const sparkle = document.createElement('div');
             sparkle.classList.add('sparkle');
@@ -665,20 +647,17 @@
             }, 3000);
         }
 
-        // Create sparkles periodically
         setInterval(createSparkle, 500);
         for (let i = 0; i < 20; i++) {
             setTimeout(createSparkle, i * 100);
         }
 
-        // ===== VIDEO CONTROLS =====
         const video = document.getElementById('myVideo');
         const playOverlay = document.getElementById('playOverlay');
         const soundButton = document.getElementById('soundButton');
         const soundIcon = document.getElementById('soundIcon');
         let isMuted = true;
 
-        // Play/Pause functionality
         playOverlay.addEventListener('click', function() {
             if (video.paused) {
                 video.play();
@@ -694,7 +673,6 @@
             }
         });
 
-        // Sound toggle
         soundButton.addEventListener('click', function(e) {
             e.stopPropagation();
             isMuted = !isMuted;
@@ -707,17 +685,14 @@
             }
         });
 
-        // Start video muted
         video.muted = true;
 
-        // ===== SMOOTH SCROLL =====
         function scrollToVideo() {
             document.getElementById('video-section').scrollIntoView({ 
                 behavior: 'smooth' 
             });
         }
 
-        // ===== SCROLL REVEAL ANIMATION =====
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -735,8 +710,6 @@
             observer.observe(el);
         });
 
-        // ===== MOBILE OPTIMIZATIONS =====
-        // Prevent double-tap zoom on buttons
         document.querySelectorAll('button, .sound-button').forEach(button => {
             button.addEventListener('touchend', function(e) {
                 e.preventDefault();
@@ -744,16 +717,13 @@
             });
         });
 
-        // Video auto-play attempt on mobile (muted)
         document.addEventListener('DOMContentLoaded', function() {
             const playPromise = video.play();
             if (playPromise !== undefined) {
                 playPromise.then(() => {
-                    // Auto-play started
                     playOverlay.style.display = 'none';
                     soundButton.style.display = 'flex';
                 }).catch(() => {
-                    // Auto-play prevented, show play button
                     playOverlay.style.display = 'flex';
                 });
             }
